@@ -318,11 +318,21 @@
     let db, auth, appId;
     try {
         // 실제 서비스(Netlify 등)에 올릴 때는 아래 부분을 본인의 Firebase 프로젝트 설정으로 바꿔주세요!
-        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {
-            // apiKey: "여기에_API_KEY_입력",
-            // authDomain: "여기에_DOMAIN_입력",
-            // projectId: "여기에_PROJECT_ID_입력"
-        };
+       const firebaseConfig = {
+
+  apiKey: "AIzaSyBqe59Dh5OjerwcK87Mp_HPH8MGsON0icE",
+
+  authDomain: "seoulland-f090b.firebaseapp.com",
+
+  projectId: "seoulland-f090b",
+
+  storageBucket: "seoulland-f090b.firebasestorage.app",
+
+  messagingSenderId: "675549898278",
+
+  appId: "1:675549898278:web:d3dc82eea8688d990be8e7"
+
+};
         
         if (firebaseConfig && Object.keys(firebaseConfig).length > 0) {
             const app = initializeApp(firebaseConfig);
